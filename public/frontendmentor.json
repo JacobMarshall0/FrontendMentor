@@ -1,0 +1,20 @@
+{
+    "problems": [
+        {
+            "id": 0,
+            "title": "Product Preview Card Component",
+            "difficulty": "Newbie",
+            "difficultyLevel": 1,
+            "directory": "product-preview-card-component",
+            "challengeURL": "https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa"
+        },
+        {
+            "id": 1,
+            "title": "Interactive Rating Component",
+            "difficulty": "Newbie",
+            "difficultyLevel": 1,
+            "directory": "interactive-rating-component",
+            "challengeURL": "https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI"
+        }
+    ]
+}

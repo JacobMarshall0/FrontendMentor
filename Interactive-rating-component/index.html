@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/images/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js" defer></script>
+
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <main>
+      <section class="visible" id="rating">
+        <div class="card rating-screen | bg-primary">
+          <div>
+            <div class="star">
+              <img class="" src="./resources/images/icon-star.svg" alt="star icon">
+            </div>
+            <h2 class="title | text-secondary spacer-top-200">How did we do?</h2>
+            <p class="| spacer-top-050">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+            <div class="rating-selection | spacer-top-200">
+              <button class="rating-button">1</button>
+              <button class="rating-button">2</button>
+              <button class="rating-button">3</button>
+              <button class="rating-button">4</button>
+              <button class="rating-button">5</button>
+            </div>
+            <div style="display:flex; justify-content:center;">
+              <button class="submit | fw-bold spacer-top-300" id="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hidden" id="thanks">
+        <div class="card thanks | bg-primary center">
+          <div>
+            <img class="spacer-top-200" src="resources/images/illustration-thank-you.svg" width="200" alt="Thank you">
+          </div>
+          <div class="center">
+            <p class="rating-selected-thanks | text-accent">You selected <span style="padding-left:.5ch; padding-right: .5ch;" id="chosen-rating"></span> out of 5</p>
+
+          </div>
+          <h2 class="title | fs-bigger text-secondary">Thank you!</h2>
+          <p class="| center-text spacer-top-025" >  We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

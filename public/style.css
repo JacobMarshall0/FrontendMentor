@@ -1,0 +1,168 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background: rgb(250,143,33);
+    background: linear-gradient(180deg, rgba(250,143,33,1) 0%, rgba(255,103,175,1) 100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 25px;
+    background: white;
+}
+
+.subcontainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.image {
+    width: 150px;
+    height:150px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.image > img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.solution-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.solution-image > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.profile-card {
+    display:none;
+}
+
+.solutions-container {
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    width: 100%;
+    gap: 30px;
+    margin: 0;
+    padding: 0;;    
+}
+
+.solution-card {
+    padding: 0rem 0rem 1rem 0rem;
+    overflow: hidden;
+    width: 100%;
+    border-radius:10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.card-text {
+    margin-left:15px;
+    margin-right:15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    height: 60px;
+}
+
+.solution-link {
+    text-decoration: none;
+    color: black;
+}
+
+.difficulty-icon {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    height: 1.5rem;
+    border:1px solid gray;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.difficulty-icon > .number{
+    padding: .2rem .5rem;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.difficulty-icon > .text {
+    padding: 0 .25rem;
+    text-transform: uppercase;
+}
+
+#Newbie .number{
+    background-color: hsl(189, 50%, 61%);
+    color: white;
+}
+
+#Newbie .text{
+    color: hsl(189, 50%, 61%);
+}
+
+#Newbie .difficulty-icon {
+    border: 2px solid hsl(189, 50%, 61%);
+}
+
+
+
+
+@media (max-width: 1000px) {
+    body{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .image {
+        width: 100px;
+        height:100px;
+    }
+
+    #profile {
+        display: none;
+    }
+
+    .profile-card {
+        width: 70vw;
+        display:flex;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 25px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    #me-card {
+        display: block;
+    }
+}
+
+.neumorphic {
+    box-shadow: 
+    12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
+    -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
+}

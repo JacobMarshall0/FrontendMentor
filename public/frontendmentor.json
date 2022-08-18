@@ -1,7 +1,6 @@
 {
     "problems": [
         {
-            "id": 0,
             "title": "Product Preview Card Component",
             "difficulty": "Newbie",
             "difficultyLevel": 1,
@@ -9,12 +8,20 @@
             "challengeURL": "https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa"
         },
         {
-            "id": 1,
             "title": "Interactive Rating Component",
             "difficulty": "Newbie",
             "difficultyLevel": 1,
-            "directory": "interactive-rating-component",
+            "directory": "Interactive-rating-component",
             "challengeURL": "https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI"
+        }
+    ],
+    "WIP": [
+        {
+            "title": "Interactive Card Details Form",
+            "difficulty": "Junior",
+            "difficultyLevel": 2,
+            "directory": "interactive-card-details-form",
+            "challengeURL": "https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw"
         }
     ]
 }

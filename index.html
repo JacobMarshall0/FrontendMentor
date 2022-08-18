@@ -13,20 +13,22 @@
     <header>
         <div class="container">
             <div class="subcontainer">
-                <div class="image">
-                    <img src="./public/images/FrontendMentor.png" alt="FrontendMentor Logo">
-                </div>
+                <a href="https://www.frontendmentor.io/">
+                    <div class="image">
+                        <img src="./public/images/FrontendMentor.png" alt="FrontendMentor Logo">
+                    </div>
+                </a>
                 <h1>My Frontend Mentor Solutions</h1>
             </div>
             <div class="subcontainer" id="profile">
-                <a href="https://www.frontendmentor.io/profile/JacobMarshall0"><h2>My Profile</h2></a>
+                <a href="https://www.frontendmentor.io/profile/JacobMarshall0" class="header-link"><h2>My Profile</h2></a>
                 <div class="image">
-                    <img src="./public/images/me.jpg" alt="">
+                    <img src="./public/images/me.png" alt="">
                 </div>
             </div>
         </div>
         <div class="profile-card">
-            <a href="https://www.frontendmentor.io/profile/JacobMarshall0"><h2>My Profile</h2></a>
+            <a href="https://www.frontendmentor.io/profile/JacobMarshall0" class="header-link"><h2>My Profile</h2></a>
             <div class="image">
                 <img class="me-card" src="./public/images/me.jpg" alt="">
             </div>
@@ -34,13 +36,23 @@
     </header>
     
     <main>
-        <h3>My solutions so far are shown below:</h3>
-        <div class="solutions-container">
-            <ul class="solutions-grid" id="solutions-grid">
-                
-            </ul>
-        </div>
-        
+        <section>
+            <h3>My solutions so far are shown below:</h3>
+            <div class="solutions-container">
+                <ul class="solutions-grid" id="solutions-grid">
+                    <!-- Cards are injected here -->
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="hidden" id="WIP-h3">Works in Progress:</h3>
+            <div class="solutions-container">
+                <ul class="solutions-grid" id="WIP">
+                    <!-- Cards are injected here-->
+                </ul>
+            </div>
+        </section>
     </main>
 </body>
 <script src="./public/main.js"></script>

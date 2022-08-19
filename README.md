@@ -1,4 +1,4 @@
-# My Frontend Mentor Examples
+# My Frontend Mentor Solutions
 
 This repo is for my [GitHub pages site](https://jacobmarshall0.github.io/FrontendMentor/), which shows a collection of [Frontend Mentor](https://www.frontendmentor.io/) challengese I have completed, or ones I am working on.
 

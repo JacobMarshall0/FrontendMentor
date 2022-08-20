@@ -5,23 +5,24 @@
             "difficulty": "Newbie",
             "difficultyLevel": 1,
             "directory": "product-preview-card-component",
-            "challengeURL": "https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa"
+            "challengeURL": "https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa",
+            "WIP": false
         },
         {
             "title": "Interactive Rating Component",
             "difficulty": "Newbie",
             "difficultyLevel": 1,
             "directory": "Interactive-rating-component",
-            "challengeURL": "https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI"
-        }
-    ],
-    "WIP": [
+            "challengeURL": "https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI",
+            "WIP": false
+        },
         {
             "title": "Interactive Card Details Form",
             "difficulty": "Junior",
             "difficultyLevel": 2,
             "directory": "interactive-card-details-form",
-            "challengeURL": "https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw"
+            "challengeURL": "https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw",
+            "WIP": true
         }
     ]
 }

@@ -5,7 +5,7 @@ const cardNumberInput = document.querySelector("#cardNumber");
 const cardNumberError = document.querySelector("#form-cardnumber-error");
 
 cardNumberInput.addEventListener("input", () => {
-    let cardNumberRegEx = /^[0-9]*$/;
+    let cardNumberRegEx = /^[0-9 ]*$/;
     let regExResult = cardNumberRegEx.test(cardNumberInput.value);
 
     if (regExResult) {
@@ -14,6 +14,7 @@ cardNumberInput.addEventListener("input", () => {
 
         cardNumberDisplay.innerText = cleanedCardNumber;
         cardNumberError.innerText = "";
+        cardNumberValidation = true;
     } else {
         cardNumberError.innerText = "Wrong format, numbers only";
     }
@@ -121,4 +122,31 @@ cardSecurityNumInput.addEventListener("input", () => {
 })
 
 
-// Need to add submit button info and validation
+// Submitting the form
+const submitButton = document.querySelector(".form-submit");
+const detailsSection = document.querySelector(".details-section");
+const thanksSection = document.querySelector(".thanks");
+const submitError = document.querySelector(".submit-error");
+
+function validateDetails(string, regex) {
+    return regex.test(string)
+}
+
+submitButton.addEventListener("click", event => {
+    event.preventDefault();
+
+    cardholderVerification = validateDetails(cardholderInput.value, /^[A-z ]*$/);
+    cardNumberVerification = validateDetails(cardNumberInput.value, /^[0-9 ]{19}$/);
+    cardMonthVerification = validateDetails(cardExpiryMonthInput.value, /^(0[1-9]|1[012])$/);
+    cardYearVerification = validateDetails(cardExpiryYearInput.value, /^(2[2-9]|[3-4][0-9])$/);
+    cardSecNumVerification = validateDetails(cardSecurityNumInput.value, /^([0-9]{3,4})$/);
+
+    // there must be a better way
+    if (cardholderVerification && cardNumberVerification && cardMonthVerification && cardYearVerification && cardSecNumVerification) {
+        detailsSection.classList.add("hidden")
+        thanksSection.classList.remove("hidden")
+        
+    } else { 
+        submitError.innerText = "Invalid information, unable to submit";
+    }
+})

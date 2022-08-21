@@ -32,7 +32,7 @@
                     <form action="" class="details-form">
                         <label for="cardholder" class="form-label">Cardholder Name</label>
                         <input type="text" class="form-input" name="cardholder" id="cardholder" placeholder="e.g. Jane Appleseed">
-                        <p class="error" id="form-cardholder-error "></p>
+                        <p class="error" id="form-cardholder-error"></p>
 
                         <label for="cardNumber" class="form-label">Card Number</label>
                         <input type="text" class="form-input" name="cardNumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
@@ -50,7 +50,11 @@
                                 <label for="cardSecurityNum" class="form-label">CVC</label>
                                 <input type="text" class="form-input" name="cardSecurityNum" id="cardSecurityNum" placeholder="e.g. 123" maxlength="4">
                             </div>
-                            
+                        </div>
+                        <div class="dates-error">
+                            <p class="error" id="monthError"></p>
+                            <p class="error" id="yearError"></p>
+                            <p class="error" id="securityNumError"></p>
                         </div>
 
                         <input type="submit" class="form-submit" value="Confirm">

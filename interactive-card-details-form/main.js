@@ -1,3 +1,5 @@
+// Can probably refactor most of this into individual functions
+
 const cardNumberDisplay = document.querySelector(".card-number");
 const cardNumberInput = document.querySelector("#cardNumber");
 const cardNumberError = document.querySelector("#form-cardnumber-error");
@@ -6,16 +8,20 @@ cardNumberInput.addEventListener("input", () => {
     let cardNumberRegEx = /^[0-9]*$/;
     let regExResult = cardNumberRegEx.test(cardNumberInput.value);
 
-    if (regExResult == false) {
-        cardNumberError.innerText = "Wrong format, numbers only";
-    } else {
+    if (regExResult) {
         let cleanedCardNumber = cardNumberInput.value;
         // Split into 4 parts with spaces
 
         cardNumberDisplay.innerText = cleanedCardNumber;
+        cardNumberError.innerText = "";
+    } else {
+        cardNumberError.innerText = "Wrong format, numbers only";
     }
 
-    if (cardNumberInput.value == "") { cardNumberDisplay.innerText = "0000 0000 0000 0000"; }
+    if (cardNumberInput.value == "") { 
+        cardNumberDisplay.innerText = "0000 0000 0000 0000";
+        cardNumberError.innerText = "";
+    }
 });
 
 const cardholderDisplay = document.querySelector(".card-cardholder");
@@ -23,12 +29,96 @@ const cardholderInput = document.querySelector("#cardholder");
 const cardholderError = document.querySelector("#form-cardholder-error");
 
 cardholderInput.addEventListener("input", () => {
-    let cardholderRegEx = /^[A-z]*$/;
+    let cardholderRegEx = /^[A-z ]*$/;
     let regExResult = cardholderRegEx.test(cardholderInput.value);
 
-    if (regExResult == false) {
-        cardholderError.innerHTML = "Letters only"
+    if (regExResult) {
+        cardholderDisplay.innerText = cardholderInput.value;
+        cardholderError.innerText = "";
     } else {
-        
+        cardholderError.innerText = "Alphabetical Letters only";
+    }
+
+    if (cardholderInput.value == "") {
+        cardholderDisplay.innerText = "Jane Appleseed";
+        cardholderError.innerText = "";
     }
 });
+
+const cardExpiryMonthDisplay = document.querySelector(".card-month");
+const cardExpiryMonthInput = document.querySelector("#cardExpiryMonth");
+const cardExpiryMonthError = document.querySelector("#monthError");
+
+cardExpiryMonthInput.addEventListener("input", () => {
+    let expiryMonthRegEx = /^(0[1-9]|1[012])$/
+    let expiryMonthRegExResult = expiryMonthRegEx.test(cardExpiryMonthInput.value);
+
+    if (expiryMonthRegExResult) {
+        cardExpiryMonthDisplay.innerText = cardExpiryMonthInput.value;
+        cardExpiryMonthError.innerText = "";
+    } else {
+        if (cardExpiryMonthInput.value.length == 1) {
+            cardExpiryMonthError.innerText = "Incorrect format (MM)";
+        } else {
+            cardExpiryMonthError.innerText = "Invalid Month";
+        }        
+    }
+    if (cardExpiryMonthInput.value == "") {
+        cardExpiryMonthDisplay.innerText = "00";
+        cardExpiryMonthError.innerText = ""; 
+        }
+
+})
+
+const cardExpiryYearDisplay = document.querySelector(".card-year");
+const cardExpiryYearInput = document.querySelector("#cardExpiryYear");
+const cardExpiryYearError = document.querySelector("#yearError");
+
+cardExpiryYearInput.addEventListener("input", () => {
+    let expiryYearRegEx = /^(2[2-9]|[3-4][0-9])$/
+    let expiryYearRegExResult = expiryYearRegEx.test(cardExpiryYearInput.value);
+
+    if (expiryYearRegExResult) {
+        cardExpiryYearDisplay.innerText = cardExpiryYearInput.value;
+        cardExpiryYearError.innerText = "";
+
+    } else {
+        if (cardExpiryYearInput.value.length == 1) {
+            cardExpiryYearError.innerText = "Incorrect format (YY)";
+        } else {
+            cardExpiryYearError.innerText = "Invalid Year";
+        } 
+    }
+
+    if (cardExpiryYearInput.value == "") { 
+        cardExpiryYearDisplay.innerText = "00";
+        cardExpiryYearError.innerText = ""; 
+    }
+})
+
+const cardSecurityNumDisplay = document.querySelector(".card-security-num");
+const cardSecurityNumInput = document.querySelector("#cardSecurityNum");
+const cardSecurityNumError = document.querySelector("#securityNumError");
+
+cardSecurityNumInput.addEventListener("input", () => {
+    let cardSecurityNumRegEx = /^([0-9]{3,4})$/
+    let cardSecurityNumRegExResult = cardSecurityNumRegEx.test(cardSecurityNumInput.value);
+
+    if (cardSecurityNumRegExResult) {
+        cardSecurityNumDisplay.innerText = cardSecurityNumInput.value;
+        cardSecurityNumError.innerText = "";
+
+    } else {
+        if (cardSecurityNumInput.value.length < 3) {
+            cardSecurityNumError.innerText = "Invalid";
+        } 
+    }
+
+    if (cardSecurityNumInput.value == "") { 
+        cardSecurityNumDisplay.innerText = "000";
+        cardSecurityNumError.innerText = ""; 
+    }
+})
+
+
+// Need to add submit button info and validation

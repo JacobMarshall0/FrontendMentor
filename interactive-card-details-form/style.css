@@ -132,6 +132,12 @@ body {
     font-family: var(--ff-main);
 }
 
+.dates-error {
+    display: flex;
+    flex-direction: row;
+    gap: 30px
+}
+
 .details-expiry > .form-input {
     width: 40%;
 }
@@ -142,6 +148,17 @@ body {
 
 .form-label::placeholder {
     color: var(--clr-neutral-200);
+}
+
+.error {
+    color: var(--clr-error);
+    font-size: var(--fs-300);
+
+}
+
+.input-error {
+    color: red;
+    border: 10px solid var(--clr-error);
 }
 
 .form-submit, 
@@ -155,6 +172,12 @@ body {
     color: var(--clr-neutral-100);
     border-radius: 10px;
     cursor: pointer;
+}
+
+
+.form-submit:hover, 
+.thanks > button:hover {
+    background-color: var(--clr-neutral-300);
 }
 
 .thanks {

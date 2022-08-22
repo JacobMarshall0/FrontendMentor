@@ -5,20 +5,23 @@ const cardNumberInput = document.querySelector("#cardNumber");
 const cardNumberError = document.querySelector("#form-cardnumber-error");
 
 cardNumberInput.addEventListener("input", () => {
-    let cardNumberRegEx = /^[0-9 ]*$/;
+    // Stop user from entering spaces
+    cardNumberInput.value = cardNumberInput.value.replace(/\s/g, "")
+    // Check input 
+    let cardNumberRegEx = /^[0-9]*$/;
     let regExResult = cardNumberRegEx.test(cardNumberInput.value);
 
+    // Handle validation
     if (regExResult) {
-        let cleanedCardNumber = cardNumberInput.value;
-        // Split into 4 parts with spaces
-
+        // Add the spaces between the 4 digits on the card
+        let cleanedCardNumber = [...cardNumberInput.value].map((digits, index) => index % 4 == 0 ? " " + digits : digits).join("")
         cardNumberDisplay.innerText = cleanedCardNumber;
-        cardNumberError.innerText = "";
-        cardNumberValidation = true;
+        cardNumberError.innerText = ""; // remove the error message
     } else {
         cardNumberError.innerText = "Wrong format, numbers only";
     }
 
+    // Reset to default
     if (cardNumberInput.value == "") { 
         cardNumberDisplay.innerText = "0000 0000 0000 0000";
         cardNumberError.innerText = "";
@@ -136,7 +139,7 @@ submitButton.addEventListener("click", event => {
     event.preventDefault();
 
     cardholderVerification = validateDetails(cardholderInput.value, /^[A-z ]*$/);
-    cardNumberVerification = validateDetails(cardNumberInput.value, /^[0-9 ]{19}$/);
+    cardNumberVerification = validateDetails(cardNumberInput.value, /^[0-9 ]{16}$/);
     cardMonthVerification = validateDetails(cardExpiryMonthInput.value, /^(0[1-9]|1[012])$/);
     cardYearVerification = validateDetails(cardExpiryYearInput.value, /^(2[2-9]|[3-4][0-9])$/);
     cardSecNumVerification = validateDetails(cardSecurityNumInput.value, /^([0-9]{3,4})$/);

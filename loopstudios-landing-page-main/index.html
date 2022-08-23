@@ -14,21 +14,22 @@
 <body>
     <section class="top-section">
         <div class="container">
-            <nav class="navbar">
-                <div class="company-name">
-                    <h1>loopstudios</h1>
+            <nav class="navbar | padding-spacer-300">
+                <div class="company-logo">
+                    <div class="image"><img src="./resources/images/logo.svg" alt="loopstudios logo"></div>
                 </div>
                 <div class="navbar-links-div">
                     <ul class="navbar-links">
-                        <li class="navbar-item">About</li>
-                        <li class="navbar-item">Careers</li>
-                        <li class="navbar-item">Events</li>
-                        <li class="navbar-item">Products</li>
-                        <li class="navbar-item">Support</li>
+                        <li class="navbar-item"><a href="#">About</a></li>
+                        <li class="navbar-item"><a href="#">Careers</a></li>
+                        <li class="navbar-item"><a href="#">Events</a></li>
+                        <li class="navbar-item"><a href="#">Products</a></li>
+                        <li class="navbar-item"><a href="#">Support</a></li>
                     </ul>
                 </div>
+                <button class="menu | hidden"><img src="./resources/images/icon-hamburger.svg" alt="Menu icon"></button>
             </nav>
-            <div class="tagline">
+            <div class="tagline | margin-spacer-700">
                 <p>Immersive Experiences That Deliver</p>
             </div>
         </div>
@@ -37,55 +38,58 @@
     <main>
         <div class="container">
             <div class="subcontainer" id="interactive">
-                <div class="image">
+                <div class="image | padding-spacer-600">
                     <img src="./resources/images/desktop/image-interactive.jpg" alt="">
-                </div>
-                <div class="interactive-text">
-                    <h1>The leader in interactive VR</h1>
-                    <p>Founded in 2011, Loopstudios has been producing world-class virtual reality 
-                    projects for some of the best companies around the globe. Our award-winning 
-                    creations have transformed businesses through digital experiences that bind
-                    to their brand.</p>
+                    <div class="interactive-text">
+                        <h1>The leader in interactive VR</h1>
+                        <p class="padding-spacer-100">Founded in 2011, Loopstudios has been producing world-class virtual reality 
+                        projects for some of the best companies around the globe. Our award-winning 
+                        creations have transformed businesses through digital experiences that bind
+                        to their brand.</p>
+                    </div>
                 </div>
             </div>
-            <div class="subcontainer" id="creations">
-                <header class="">
+            <div class="subcontainer | padding-spacer-600" id="creations">
+                <header>
                     <h1>Our Creations</h1>
                     <button>See all</button>
                 </header>
-                <section class="creations">
-                    <div class="card" id="deep-earth"><p>Deep Earth</p></div>
-                    <div class="card" id="night-arcade"><p>Night arcade</p></div>
-                    <div class="card" id="soccer-team"><p>Soccer team VR</p></div>
-                    <div class="card" id="the-grid"><p>The grid</p></div>
-                    <div class="card" id="from-up-above"><p>From up above VR</p></div>
-                    <div class="card" id="pocket-borealis"><p>Pocket borealis</p></div>
-                    <div class="card" id="the-curiosity"><p>The curiosity</p></div>
-                    <div class="card" id="make-it-fisheye"><p>Make it fisheye</p></div>
+                <section class="creations | padding-spacer-400">
+                    <div class="card" id="deep-earth"><p class="card-content">Deep Earth</p></div>
+                    <div class="card" id="night-arcade"><p class="card-content">Night arcade</p></div>
+                    <div class="card" id="soccer-team"><p class="card-content">Soccer team VR</p></div>
+                    <div class="card" id="the-grid"><p class="card-content">The grid</p></div>
+                    <div class="card" id="from-up-above"><p class="card-content">From up above VR</p></div>
+                    <div class="card" id="pocket-borealis"><p class="card-content">Pocket borealis</p></div>
+                    <div class="card" id="the-curiosity"><p class="card-content">The curiosity</p></div>
+                    <div class="card" id="make-it-fisheye"><p class="card-content">Make it fisheye</p></div>
                 </section>
             </div>
         </div>
     </main>
-    <footer>
-        <div class="footer-top-container">
-            <h2>loopstudios</h2>
-            <ul class="icons">
-                <li>fb</li>
-                <li>tw</li>
-                <li>pi</li>
-                <li>in</li>
-            </ul>
-        </div>
-        <div class="footer-bottom-container">
-            <ul class="footer-links">
-                <li class="">About</li>
-                <li class="">Careers</li>
-                <li class="">Events</li>
-                <li class="">Products</li>
-                <li class="">Support</li>
-            </ul>
-            <p class="copyrights">© 2021 Loopstudios. All rights reserved.</p>
-        </div>
-    </footer>
+    <section class="footer | margin-spacer-700">
+        <footer class="padding-spacer-200">
+            <div class="footer-content">
+                <img src="./resources/images/logo.svg" alt="loopstudios icon">
+                <ul class="footer-links">
+                    <li class="footer-links-item"><a href="" class="">About</a></li>
+                    <li class="footer-links-item"><a href="" class="">Careers</a></li>
+                    <li class="footer-links-item"><a href="" class="">Events</a></li>
+                    <li class="footer-links-item"><a href="" class="">Products</a></li>
+                    <li class="footer-links-item"><a href="" class="">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <ul class="icons">
+                    <li><a href=""><img src="./resources/images/icon-facebook.svg" alt="Facebook Logo"></a></li>
+                    <li><a href=""><img src="./resources/images/icon-twitter.svg" alt="Twitter Logo"></a></li>
+                    <li><a href=""><img src="./resources/images/icon-pinterest.svg" alt="Pinterest Logo"></a></li>
+                    <li><a href=""><img src="./resources/images/icon-instagram.svg" alt="Instagram Logo"></a></li>
+                </ul>
+                <p class="copyrights">© 2021 Loopstudios. All rights reserved.</p>
+            </div>
+        </footer>
+        <div class="padding-spacer-200"></div>
+    </section>
 </body>
 </html>

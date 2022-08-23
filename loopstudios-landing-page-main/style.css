@@ -1,0 +1,11 @@
+:root {
+    --clr-primary-100:hsl(0, 0%, 100%);
+    --clr-primary-200:hsl(0, 0%, 0%);
+    --clr-primary-300:hsl(0, 0%, 55%);
+    --clr-primary-400:hsl(0, 0%, 41%);
+
+    --ff-primary: 'Alata', sans-serif;
+    --ff-secondary: 'Josefin Sans', sans-serif;
+
+    --fs-400: .925rem
+}

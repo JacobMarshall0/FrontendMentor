@@ -18,6 +18,7 @@
     --fs-900: 1.5rem;
     --fs-1000: 1.75rem;
     --fs-1500: 2.625rem;
+    --fs-1750: 3.0625rem;
     --fs-2000: 3.5rem;
 
     --fw-light: 300;
@@ -41,11 +42,11 @@ h1 {
     height: 700px;
     background-image: url(./resources/images/desktop/image-hero.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .container {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin: 0 200px;
 }
 
 .navbar {
@@ -66,10 +67,21 @@ h1 {
     text-decoration: none;
 }
 
-.menu {
+.menu-button {
+    display: none;
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: rgba(67, 67, 67, 0.75);
+    border-radius: 10px;
+}
+
+.menu-open {
+    display:block;
 }
 
 .tagline {
@@ -83,12 +95,12 @@ h1 {
     font-weight: var(--fw-light);
 }
 
-.subcontainer #interactive{
-
-}
-
 .subcontainer > .image {
     z-index: 2;
+}
+
+#interactive-mobile {
+    display: none;
 }
 
 .interactive-text {
@@ -101,6 +113,10 @@ h1 {
     top: -16rem;
     z-index: 1;
     margin-bottom: -16rem;
+}
+
+.interactive-text > p {
+    color: var(--clr-primary-300);
 }
 
 #creations header {
@@ -123,6 +139,10 @@ h1 {
 #creations button:hover {
     background-color: var(--clr-primary-300);
     transition: .2s ease-in-out;
+}
+
+.see-all-mobile {
+    display: none;
 }
 
 .creations {
@@ -196,9 +216,126 @@ footer {
     color: var(--clr-primary-300);
 }
 
-/* Need to separate out footer */
+@media screen and (max-width:50em) {
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 
+    .container {
+        margin: 0 50px;
+    }
+    
+    .top-section {
+        background-image: url(./resources/images/mobile/image-hero.jpg);
+    }
 
+    .navbar-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        right: 50px;
+        z-index: 2;
+    }
+
+    .mobile-menu > .navbar-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 4em;
+        gap:1rem;
+    }
+    
+    .mobile-menu > .navbar-links > .navbar-item {
+        padding: .5rem;
+    }
+    .menu-button {
+        display: inline;
+    }
+
+    .tagline {
+        width: 80%;
+        font-size: var(--fs-1750);
+    }
+
+    #interactive-desktop {
+        display: none;
+    }
+
+    #interactive-mobile {
+        display: inline;
+    }
+
+    .interactive-text {
+        position: static;
+        margin-top: 60px;
+        margin-bottom: 0;
+        padding: 0 0;    
+        text-align: center;
+
+    }
+
+    .see-all-desktop {
+        display: none;
+    }
+
+    .see-all-mobile {
+        display: inline;
+    }
+
+    div .see-all-mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .creations {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: 200px;
+    }
+
+    #deep-earth {background-image: url(./resources/images/mobile/image-deep-earth.jpg);}
+    #night-arcade {background-image: url(./resources/images/mobile/image-night-arcade.jpg);}
+    #soccer-team {background-image: url(./resources/images/mobile/image-soccer-team.jpg);}
+    #the-grid {background-image: url(./resources/images/mobile/image-grid.jpg);}
+    #from-up-above {background-image: url(./resources/images/mobile/image-from-above.jpg);}
+    #pocket-borealis {background-image: url(./resources/images/mobile/image-pocket-borealis.jpg);}
+    #the-curiosity {background-image: url(./resources/images/mobile/image-curiosity.jpg);}
+    #make-it-fisheye {background-image: url(./resources/images/mobile/image-fisheye.jpg);}
+
+    .footer > footer{
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icons {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 50em) {
+    .menu-open {
+        display: none;
+    }
+}
 
 /* Utilities */
 

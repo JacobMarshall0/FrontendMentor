@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/images/favicon-32x32.png">
     <title>Frontend Mentor | Loopstudios landing page</title>
 </head>
 <body>
@@ -27,7 +27,16 @@
                         <li class="navbar-item"><a href="#">Support</a></li>
                     </ul>
                 </div>
-                <button class="menu | hidden"><img src="./resources/images/icon-hamburger.svg" alt="Menu icon"></button>
+                <button class="menu-button" onclick="toggleMenu()"><img src="./resources/images/icon-hamburger.svg" alt="Menu icon"></button>
+            </nav>
+            <nav class="mobile-menu">
+                <ul class="navbar-links">
+                    <li class="navbar-item"><a href="#">About</a></li>
+                    <li class="navbar-item"><a href="#">Careers</a></li>
+                    <li class="navbar-item"><a href="#">Events</a></li>
+                    <li class="navbar-item"><a href="#">Products</a></li>
+                    <li class="navbar-item"><a href="#">Support</a></li>
+                </ul>
             </nav>
             <div class="tagline | margin-spacer-700">
                 <p>Immersive Experiences That Deliver</p>
@@ -39,7 +48,8 @@
         <div class="container">
             <div class="subcontainer" id="interactive">
                 <div class="image | padding-spacer-600">
-                    <img src="./resources/images/desktop/image-interactive.jpg" alt="">
+                    <img src="./resources/images/desktop/image-interactive.jpg" id="interactive-desktop" alt="Man using VR">
+                    <img src="./resources/images/mobile/image-interactive.jpg" id="interactive-mobile" alt="Man using VR">
                     <div class="interactive-text">
                         <h1>The leader in interactive VR</h1>
                         <p class="padding-spacer-100">Founded in 2011, Loopstudios has been producing world-class virtual reality 
@@ -52,7 +62,7 @@
             <div class="subcontainer | padding-spacer-600" id="creations">
                 <header>
                     <h1>Our Creations</h1>
-                    <button>See all</button>
+                    <button class="see-all-desktop">See all</button>
                 </header>
                 <section class="creations | padding-spacer-400">
                     <div class="card" id="deep-earth"><p class="card-content">Deep Earth</p></div>
@@ -64,14 +74,19 @@
                     <div class="card" id="the-curiosity"><p class="card-content">The curiosity</p></div>
                     <div class="card" id="make-it-fisheye"><p class="card-content">Make it fisheye</p></div>
                 </section>
+                <div class="see-all-mobile">
+                    <button class="see-all-mobile | margin-spacer-200">See all</button>
+                </div>
             </div>
         </div>
     </main>
     <section class="footer | margin-spacer-700">
         <footer class="padding-spacer-200">
             <div class="footer-content">
-                <img src="./resources/images/logo.svg" alt="loopstudios icon">
-                <ul class="footer-links">
+                <div class="footer-logo">
+                    <img src="./resources/images/logo.svg" alt="loopstudios icon">
+                </div>
+                <ul class="footer-links | padding-spacer-100">
                     <li class="footer-links-item"><a href="" class="">About</a></li>
                     <li class="footer-links-item"><a href="" class="">Careers</a></li>
                     <li class="footer-links-item"><a href="" class="">Events</a></li>
@@ -86,10 +101,11 @@
                     <li><a href=""><img src="./resources/images/icon-pinterest.svg" alt="Pinterest Logo"></a></li>
                     <li><a href=""><img src="./resources/images/icon-instagram.svg" alt="Instagram Logo"></a></li>
                 </ul>
-                <p class="copyrights">© 2021 Loopstudios. All rights reserved.</p>
+                <p class="copyrights | padding-spacer-100">© 2021 Loopstudios. All rights reserved.</p>
             </div>
         </footer>
         <div class="padding-spacer-200"></div>
     </section>
 </body>
+<script src="main.js"></script>
 </html>

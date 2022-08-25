@@ -6,6 +6,4 @@ You can view it [here](https://jacobmarshall0.github.io/FrontendMentor/loopstudi
 
 ## Issues
 
-Fixed responsiveness issues.
-
-Footer not centered
+Lacks active states for :hover

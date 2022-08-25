@@ -38,6 +38,7 @@ h1 {
     font-family: var(--ff-secondary);
     text-transform: uppercase;
     font-size: var(--fs-1500);
+    font-weight: var(--fw-light);
 }
 
 .top-section {
@@ -97,13 +98,12 @@ h1 {
     font-weight: var(--fw-light);
 }
 
-.subcontainer > .image {
+.subcontainer > .image >img {
     z-index: 2;
+    width: 80%;
 }
 
-.image > img {
-    width: 20%;
-}
+
 
 #interactive-mobile {
     display: none;
@@ -115,7 +115,7 @@ h1 {
     padding-left: 4rem;
     padding-top: 4rem;
     position: relative;
-    left: 580px;
+    left: 450px;
     top: -16rem;
     z-index: 1;
     margin-bottom: -16rem;
@@ -153,7 +153,7 @@ h1 {
 
 .creations {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     row-gap: 3rem;
     color: white;
     font-family: var(--ff-secondary);
@@ -161,8 +161,8 @@ h1 {
 }
 
 .card {
-    height: 560px;
-    width: 320px;
+    height: 390px;
+    width: 240px;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -174,9 +174,10 @@ h1 {
 .card-content { 
     padding-bottom: 2rem;
     padding-left: 2rem;
-    font-size: var(--fs-1500);
+    font-size: var(--fs-1250);
     width: 16rem;
 }
+
 
 #deep-earth {background-image: url(./resources/images/desktop/image-deep-earth.jpg);}
 #night-arcade {background-image: url(./resources/images/desktop/image-night-arcade.jpg);}
@@ -276,8 +277,9 @@ footer {
     }
 
     .tagline {
-        width: 80%;
-        font-size: var(--fs-1250);
+        width: 90%;
+        font-size: var(--fs-1000);
+        
     }
 
     #interactive-desktop {
@@ -286,6 +288,10 @@ footer {
 
     #interactive-mobile {
         display: inline;
+    }
+
+    .subcontainer > .image > img {
+        width: 100%;
     }
 
     .interactive-text {
@@ -317,15 +323,18 @@ footer {
         gap: 1rem;
     }
 
+    #creations h1 { 
+        text-align: center;
+    }
+
     .card {
         width: 95%;
         height: 100px;
         box-shadow: inset 0 -50px 50px black;
-
     }
 
     .card-content {
-        font-size: var(--fs-1000);
+        font-size: var(--fs-800);
         width: 60%;
         padding-bottom: 5px;
     }
@@ -338,6 +347,11 @@ footer {
     #pocket-borealis {background-image: url(./resources/images/mobile/image-pocket-borealis.jpg);}
     #the-curiosity {background-image: url(./resources/images/mobile/image-curiosity.jpg);}
     #make-it-fisheye {background-image: url(./resources/images/mobile/image-fisheye.jpg);}
+
+    footer {
+        margin: 0 0;
+        align-items: center;
+    }
 
     .footer > footer{
         flex-direction: column;

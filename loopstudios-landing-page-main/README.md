@@ -6,6 +6,6 @@ You can view it [here](https://jacobmarshall0.github.io/FrontendMentor/loopstudi
 
 ## Issues
 
-There are some issues with the responsiveness when resizing using the Chrome device toolbar in the developer tools where the HTML width changes and only uses a fraction of the page, though resizing the window seems to work okay.
+Fixed responsiveness issues.
 
-I have not tested this from my mobile yet.
+Footer not centered

@@ -17,6 +17,7 @@
     --fs-800: 1.375rem;
     --fs-900: 1.5rem;
     --fs-1000: 1.75rem;
+    --fs-1200: 2rem;
     --fs-1250: 2.1875rem;
     --fs-1500: 2.625rem;
     --fs-1750: 3.0625rem;
@@ -68,6 +69,27 @@ h1 {
 .navbar-item > a {
     color: var(--clr-primary-100);
     text-decoration: none;
+    position: relative;
+}
+
+.navbar-item > a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: all .25s ease-in-out;
+
+
+}
+
+.navbar-item > a:hover::before {
+    transform: scaleX(1);
 }
 
 .menu-button {
@@ -79,7 +101,7 @@ h1 {
 
 .mobile-menu {
     display: none;
-    background-color: rgba(67, 67, 67, 0.75);
+    background-color: rgba(67, 67, 67, 0.9);
     border-radius: 10px;
 }
 
@@ -103,8 +125,6 @@ h1 {
     width: 80%;
 }
 
-
-
 #interactive-mobile {
     display: none;
 }
@@ -115,7 +135,7 @@ h1 {
     padding-left: 4rem;
     padding-top: 4rem;
     position: relative;
-    left: 450px;
+    left: 50%;
     top: -16rem;
     z-index: 1;
     margin-bottom: -16rem;
@@ -172,12 +192,16 @@ h1 {
 }
 
 .card-content { 
+
     padding-bottom: 2rem;
     padding-left: 2rem;
-    font-size: var(--fs-1250);
-    width: 16rem;
+    font-size: var(--fs-1200);
+    width: 90%;
 }
 
+.card:hover {
+    font-weight: bolder;
+}
 
 #deep-earth {background-image: url(./resources/images/desktop/image-deep-earth.jpg);}
 #night-arcade {background-image: url(./resources/images/desktop/image-night-arcade.jpg);}
@@ -217,6 +241,16 @@ footer {
     justify-content: space-evenly;
     gap: .75rem;
     list-style-type: none;
+}
+
+.icons > li {
+    transition: all .2s ease;
+
+}
+
+.icons > li:hover {
+    transform: scale(1.5);
+    transform-origin: center;
 }
 
 .copyrights {

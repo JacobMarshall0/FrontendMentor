@@ -1,0 +1,14 @@
+:root {
+    --clr-primary-100: hsl(172, 67%, 45%);
+
+    --clr-neutral-100: hsl(183, 100%, 15%);
+    --clr-neutral-200: hsl(186, 14%, 43%);
+    --clr-neutral-300: hsl(184, 14%, 56%);
+    --clr-neutral-400: hsl(185, 41%, 84%);
+    --clr-neutral-500: hsl(189, 41%, 97%);
+    --clr-neutral-600: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--clr-neutral-400)
+}

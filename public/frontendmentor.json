@@ -39,6 +39,14 @@
             "directory": "loopstudios-landing-page-main",
             "challengeURL": "https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw",
             "WIP": false
+        },
+        {
+            "title": "Tip Calculator App",
+            "difficulty": "Junior",
+            "difficultyLevel": 2,
+            "directory": "tip-calculator-app-main",
+            "challengeURL": "https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX",
+            "WIP": true
         }
     ]
 }

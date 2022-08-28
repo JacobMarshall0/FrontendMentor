@@ -41,5 +41,20 @@ body {
 }
 .app {
     display: flex;
-    
+    background-color: var(--clr-neutral-600);
+    border-radius: 10px;
+    padding: 1rem 1rem;
+}
+
+.data-display {
+    background-color: var(--clr-neutral-100);
+    border-radius: 10px;
+}
+
+p:nth-child(odd) {
+    color: var(--clr-neutral-300);
+}
+
+p:nth-child(even) {
+    color: var(--clr-neutral-600);
 }

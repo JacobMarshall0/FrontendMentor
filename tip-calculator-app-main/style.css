@@ -7,8 +7,39 @@
     --clr-neutral-400: hsl(185, 41%, 84%);
     --clr-neutral-500: hsl(189, 41%, 97%);
     --clr-neutral-600: hsl(0, 0%, 100%);
+
+    --ff-primary: 'Space Mono', monospace;
+
+    --fs-100: .75rem;
+    --fs-200: 1rem;
+    --fs-300: 1.25rem;
+    --fs-400: 1.5rem;
+    --fs-500: 1.75rem;
+    --fs-600: 2rem;
+    --fs-700: 2.25rem;
+
+    --fw: 700;
 }
 
 body {
-    background-color: var(--clr-neutral-400)
+    background-color: var(--clr-neutral-400);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    font-family: var(--ff-primary);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.app {
+    display: flex;
+    
 }

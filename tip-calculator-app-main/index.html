@@ -11,56 +11,54 @@
     
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="./resources/images/logo.svg" alt="">
-        </div>
-        <section class="app">
-            <section class="data-entry">
-                <div class="bill">
-                    <form action="" class="bill">
-                        <label for="bill">Bill</label>
-                        <input type="text" name="bill" class="bill">
-                    </form>
-                </div>
-                <div class="tip-percentage">
-                    <h2>Select Tip %</h2>
-                    <div class="tip-buttons">
-                        <button class="tip-button">5%</button>
-                        <button class="tip-button">10%</button>
-                        <button class="tip-button">15%</button>
-                        <button class="tip-button">25%</button>
-                        <button class="tip-button">50%</button>
-                        <form action=""><input type="text" name="custom"></form>
-                    </div>
-                </div>
-                <div class="people">
-                    <form action="" class="people">
-                        <label for="numPeople" class="people">Number of People</label>
-                        <input type="text" class="people">
-                    </form>
-                </div>
-            </section>
-            <section class="data-display">
-                <div class="info">
-                    <div class="tip-amount-pp">
-                        <p class="display-lab">
-                            <span>Tip Amount</span><br>
-                            <span>/ person</span>
-                        </p>
-                        <h1>$0.00</h1>
-                    </div>
-                    <div class="tip-amount-pp">
-                        <p class="display-lab">
-                            <span>Total</span><br>
-                            <span>/ person</span>
-                        </p>
-                        <h1>$0.00</h1>
-                    </div>
-                </div>
-                <button>Reset</button>
-            </section>
-        </section>
+    <div class="logo">
+        <img src="./resources/images/logo.svg" alt="">
     </div>
+    <section class="app">
+        <section class="data-entry">
+            <div class="bill">
+                <form action="" class="bill">
+                    <label for="bill">Bill</label>
+                    <input type="text" name="bill" class="bill">
+                </form>
+            </div>
+            <div class="tip-percentage">
+                <h2>Select Tip %</h2>
+                <div class="tip-buttons">
+                    <button class="tip-button">5%</button>
+                    <button class="tip-button">10%</button>
+                    <button class="tip-button">15%</button>
+                    <button class="tip-button">25%</button>
+                    <button class="tip-button">50%</button>
+                    <form action=""><input type="text" name="custom" class="custom-tip" maxlength="3" placeholder="Custom"></form>
+                </div>
+            </div>
+            <div class="people">
+                <form action="" class="people">
+                    <label for="numPeople" class="people">Number of People</label>
+                    <input type="number" class="people">
+                </form>
+            </div>
+        </section>
+        <section class="data-display">
+            <div class="info">
+                <div class="tip-amount-pp">
+                    <p class="display-amount">
+                        <span>Tip Amount</span><br>
+                        <span class="| colour-gray-cyan">/ person</span>
+                    </p>
+                    <h1>$0.00</h1>
+                </div>
+                <div class="tip-amount-pp">
+                    <p class="display-amount">
+                        <span>Total</span><br>
+                        <span class="| colour-gray-cyan">/ person</span>
+                    </p>
+                    <h1>$0.00</h1>
+                </div>
+            </div>
+            <button>Reset</button>
+        </section>
+    </section>
 </body>
 </html>

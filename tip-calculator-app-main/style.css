@@ -59,10 +59,11 @@ button:hover {
     display: flex;
     background-color: var(--clr-neutral-600);
     border-radius: 10px;
-    padding: 1rem 1rem;
-    gap: 1rem;
+    padding: 2rem 2rem;
+    gap: 2rem;
 }
 
+/* -------------------- LEFT SECTION -------------------- */
 
 .tip-buttons {
     display: flex;
@@ -83,10 +84,19 @@ button:hover {
     color: var(--clr-neutral-100)
 }
 
+.selected-button {
+    background-color: var(--clr-primary-100);
+    color: var(--clr-neutral-100);
+}
+
 .custom-tip {
     width: 5rem;
     height: 2rem;
     text-align: center;
+}
+
+input.selected-button {
+    border: 2px solid var(--clr-primary-100)
 }
 
 .form-input {
@@ -102,19 +112,19 @@ button:hover {
 input {
     border-radius: 5px;
     border: none;
-    background-color: var(--clr-neutral-400);
+    background-color: var(--clr-neutral-500);
     font-size: var(--fs-200);
     outline: none;
-
+    color: var(--clr-neutral-100);
 }
 
 input:focus {
     border: 2px solid var(--clr-primary-100);
 }
 
+
 .error:focus {
     border: 1px solid var(--clr-error);
-
 }
 
 ::placeholder {
@@ -128,6 +138,29 @@ input:focus {
 #people {
     background-image: url(resources/images/icon-person.svg);
 }
+
+.people {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+p.error {
+    position: absolute;
+    right: 0;
+    color: var(--clr-error);
+    font-size: var(--fs-100);
+}
+
+
+/* -------------------- RIGHT SECTION -------------------- */
 
 .data-display {
     width: 17.5rem;
@@ -176,6 +209,20 @@ input:focus {
 
 .display-amount > :nth-child(2) {
     color: var(--clr-neutral-300);
+}
+
+#tip-pp::before {
+    content:"$";
+}
+
+#total-pp::before {
+    content:"$";
+}
+
+@media screen and (max-width:50em) {
+    .app {
+        flex-direction: column;
+    }
 }
 
 

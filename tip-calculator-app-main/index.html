@@ -18,24 +18,31 @@
         <section class="data-entry">
             <div class="bill">
                 <form action="" class="bill">
-                    <label for="bill">Bill</label>
+                    <div class="error-div">
+                        <label for="bill">Bill</label>
+                        <p class="error" id="bill-error"></p>
+                    </div>
+                    
                     <input type="text" name="bill" class="form-input" id="bill" placeholder="0">
                 </form>
             </div>
             <div class="tip-percentage">
                 <h3>Select Tip %</h2>
                 <div class="tip-buttons">
-                    <button class="tip-button">5%</button>
-                    <button class="tip-button">10%</button>
-                    <button class="tip-button">15%</button>
-                    <button class="tip-button">25%</button>
-                    <button class="tip-button">50%</button>
+                    <button class="tip-button" value="0.05">5%</button>
+                    <button class="tip-button" value="0.10">10%</button>
+                    <button class="tip-button" value="0.15">15%</button>
+                    <button class="tip-button" value="0.25">25%</button>
+                    <button class="tip-button" value="0.50">50%</button>
                     <form action=""><input type="text" name="custom" class="custom-tip" maxlength="3" placeholder="Custom"></form>
                 </div>
             </div>
             <div class="people">
                 <form action="" class="people">
-                    <label for="numPeople" class="people">Number of People</label>
+                    <div class="error-div">
+                        <label for="numPeople" class="people">Number of People</label>
+                        <p class="error" id="people-error"></p>
+                    </div>
                     <input type="number" class="form-input" id="people">
                 </form>
             </div>
@@ -47,18 +54,19 @@
                         <span>Tip Amount</span><br>
                         <span class="| colour-gray-cyan">/ person</span>
                     </p>
-                    <h1>$0.00</h1>
+                    <h1 id="tip-pp">0.00</h1>
                 </div>
                 <div class="tip-amount-pp">
                     <p class="display-amount">
                         <span>Total</span><br>
                         <span class="| colour-gray-cyan">/ person</span>
                     </p>
-                    <h1>$0.00</h1>
+                    <h1 id="total-pp">0.00</h1>
                 </div>
             </div>
             <button>Reset</button>
         </section>
     </section>
 </body>
+<script src="main.js"></script>
 </html>

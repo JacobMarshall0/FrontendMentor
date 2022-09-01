@@ -93,10 +93,12 @@ button:hover {
     width: 5rem;
     height: 2rem;
     text-align: center;
+    transition: all .2s ease-in-out;
 }
 
 input.selected-button {
-    border: 2px solid var(--clr-primary-100)
+    border: 2px solid var(--clr-primary-100);
+    transition: all .2s ease-in-out;
 }
 
 .form-input {
@@ -159,6 +161,10 @@ p.error {
     font-size: var(--fs-100);
 }
 
+input.error {
+    border: 2px solid var(--clr-error);
+}
+
 
 /* -------------------- RIGHT SECTION -------------------- */
 
@@ -174,6 +180,7 @@ p.error {
 
 .data-display button {
     background-color: var(--clr-reset-button);
+    text-transform: uppercase;
     color: var(--clr-neutral-100);
     height: 2rem;
     transition: all .2s ease-in-out;

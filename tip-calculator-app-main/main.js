@@ -4,7 +4,9 @@ const customInput = document.querySelector(".custom-tip");
 const displayTipPP = document.querySelector("#tip-pp");
 const displayTotalPP = document.querySelector("#total-pp");
 const formBill = document.querySelector("#bill");
+const formBillError = document.querySelector("#bill-error")
 const formPeople = document.querySelector("#people");
+const formPeopleError = document.querySelector("#people-error")
 
 let chosen_tip;
 
@@ -13,7 +15,6 @@ function clearSelected() {
     tipButtons.forEach(element => {
         element.classList.remove("selected-button");
         customInput.classList.remove("selected-button");
-        // Need to clear the value of customTip
         chosen_tip = null;
     })
 }
@@ -33,20 +34,15 @@ function calcResults(bill, tip, num_people) {
 
 function validateForm(){
     if ((chosen_tip != null) && (formBill.value > 0) && (formPeople.value > 0)){
-        console.log("TRUE")
         return true
     } else {
-        console.log("FALSE")
         return false
     }
 }
 
-// Need to figure out why this goes NaN
 function updateDisplay(){
     if (validateForm()){
         money_data = calcResults(formBill.value, chosen_tip, formPeople.value)
-        console.log(money_data['tip_pp'])
-        console.log(money_data['total_pp'])
         displayTipPP.textContent = money_data['tip_pp']
         displayTotalPP.textContent = money_data['total_pp']
     }
@@ -57,39 +53,84 @@ function resetDisplay(){
     displayTotalPP.textContent = "0.00";
 }
 
-
 tipButtons.forEach(element => {
     element.addEventListener("click", () => {
-        console.log(element.value);
-        clearSelected();
-        assignSelected(element);
-        chosen_tip = parseFloat(element.value) 
-        updateDisplay();
+        if (!element.classList.contains("selected-button")) {
+            clearSelected();
+            assignSelected(element);
+            chosen_tip = parseFloat(element.value);
+            updateDisplay();
+        } else {
+            element.classList.remove("selected-button");
+            chosen_tip = null;
+        }
+        
     })
 });
 
-// Need to reset the chosen_tip and selected class when value becomes empty
+// Need to add regex to limit to decimals
+const customRegex = /^\d*$/
 // Also need to add % after text
 customInput.addEventListener("input", () => {
+    if (!(customRegex.test(customInput.value))) { 
+        customInput.classList.add("error")
+    } else {
+        customInput.classList.remove("error")
+    }
     clearSelected()
     customInput.classList.add("selected-button")
     chosen_tip = parseFloat(customInput.value / 100)
     updateDisplay();
+
+    if (customInput.value == "") {
+        customInput.classList.remove("selected-button");
+        chosen_tip = null;
+    }
 })
 
-// Need to add regex to force format of ddd or ddd.dd
+// click handler for when a user enters a value, clicks a different button, and comes back to custom
+customInput.addEventListener("click", () => {
+    if (customInput.value != "") {
+        clearSelected()
+        customInput.classList.add("selected-button");
+        chosen_tip = parseFloat(customInput.value / 100)
+    }  
+})
+
+// Need to change regex to allow format without decimals and assume .00
+const formRegex = /^\d+(\.|\,)\d{2}$/
 formBill.addEventListener("input", () => {
-    updateDisplay()
+    if (formRegex.test(formBill.value)) {
+        updateDisplay()
+        formBillError.textContent = ""
+        formBill.classList.remove("error")
+
+    } else {
+        formBillError.textContent = "Wrong format"
+        formBill.classList.add("error")
+    }
+    if (formBill.value == "") { 
+        resetDisplay() 
+        formBill.classList.remove("error")
+    }
 })
 
 formPeople.addEventListener("input", () => {
     updateDisplay();
+    if ((formPeople.value == "") || (formPeople.value <= 0)) { 
+        resetDisplay();
+        formPeopleError.textContent = "Can't be 0"
+        formPeople.value = "0"
+    } else {
+        formPeopleError.textContent = ""
+    }
 })
 
-// Needs to clear the custom input field
 resetButton.addEventListener("click", () => {
     formBill.value = "";
     formPeople.value = "";
+    customInput.value = "";
     resetDisplay();
     clearSelected();
+    // need to reset errors too
 })

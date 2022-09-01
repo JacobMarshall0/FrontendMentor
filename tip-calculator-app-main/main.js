@@ -25,8 +25,8 @@ function assignSelected(element) {
 function calcResults(bill, tip, num_people) {
     let tip_amount = (bill * (1 + tip)) - bill;
 
-    let tip_amount_pp = tip_amount / num_people;
-    let total_pp = (bill + tip_amount) / num_people;
+    let tip_amount_pp = (tip_amount / num_people).toFixed(2);
+    let total_pp = ((parseFloat(bill) + parseFloat(tip_amount)) / num_people).toFixed(2);
 
     return {"tip_pp": tip_amount_pp, "total_pp": total_pp};
 }
@@ -44,7 +44,7 @@ function validateForm(){
 // Need to figure out why this goes NaN
 function updateDisplay(){
     if (validateForm()){
-        money_data = calcResults(formBill.value, chosen_tip, formPeople)
+        money_data = calcResults(formBill.value, chosen_tip, formPeople.value)
         console.log(money_data['tip_pp'])
         console.log(money_data['total_pp'])
         displayTipPP.textContent = money_data['tip_pp']
@@ -63,7 +63,7 @@ tipButtons.forEach(element => {
         console.log(element.value);
         clearSelected();
         assignSelected(element);
-        chosen_tip = parseFloat(element.value)
+        chosen_tip = parseFloat(element.value) 
         updateDisplay();
     })
 });
@@ -73,7 +73,7 @@ tipButtons.forEach(element => {
 customInput.addEventListener("input", () => {
     clearSelected()
     customInput.classList.add("selected-button")
-    chosen_tip = parseFloat(customInput.value)
+    chosen_tip = parseFloat(customInput.value / 100)
     updateDisplay();
 })
 

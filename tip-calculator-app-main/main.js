@@ -99,8 +99,9 @@ customInput.addEventListener("click", () => {
 
 // Need to change regex to allow format without decimals and assume .00
 const formRegex = /^\d+(\.|\,)\d{2}$/
+const formRegex2 = /^\d*$/
 formBill.addEventListener("input", () => {
-    if (formRegex.test(formBill.value)) {
+    if (formRegex.test(formBill.value) || (formRegex2.test(formBill.value))) {
         updateDisplay()
         formBillError.textContent = ""
         formBill.classList.remove("error")

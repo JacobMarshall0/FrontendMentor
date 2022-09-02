@@ -46,7 +46,7 @@
             "difficultyLevel": 2,
             "directory": "tip-calculator-app-main",
             "challengeURL": "https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX",
-            "WIP": true
+            "WIP": false
         }
     ]
 }

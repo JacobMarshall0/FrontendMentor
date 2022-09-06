@@ -3,20 +3,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
   
     <title>Frontend Mentor | Advice generator app</title>
 </head>
 <body>
     <div class="app">
-        <h1>Advice #<span id="advice-number"></span></h1>
-        <p id="advice-text"></p>
-        <div class="divider">
-            <div class="image">
-                <img src="./resources/images/pattern-divider-desktop.svg" alt="Divider" id="desktop">
-                <img src="./resources/images/pattern-divider-mobile.svg" alt="Divider" id="mobile">
-            </div>
-            <button><img src="./resources/images/icon-dice.svg" alt="Re-roll"></button>
+        <h1 id="advice-head">ADVICE #123</h1>
+        <p id="advice-text">This is a piece of advice</p>
+        <div class="divider-image">
+            <img src="./resources/images/pattern-divider-desktop.svg" alt="Divider" id="desktop">
+            <img src="./resources/images/pattern-divider-mobile.svg" alt="Divider" id="mobile">
         </div>
+        <button><img src="./resources/images/icon-dice.svg" alt="Re-roll"></button>
     </div>
 </body>
 </html>

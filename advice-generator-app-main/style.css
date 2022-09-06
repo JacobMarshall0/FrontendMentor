@@ -1,0 +1,64 @@
+:root {
+    --clr-primary-100: hsl(193, 38%, 86%);
+    --clr-primary-200: hsl(150, 100%, 66%);
+
+    --clr-neutral-100:hsl(217, 19%, 38%);
+    --clr-neutral-200:hsl(217, 19%, 24%);
+    --clr-neutral-300:hsl(218, 23%, 16%);
+
+    --ff-main: 'Manrope', sans-serif;
+}
+
+body {
+    font-family: var(--ff-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-neutral-300);
+}
+
+h1 {
+    color: var(--clr-primary-200);
+    font-size: small;
+    letter-spacing: .33ch;
+}
+
+p {
+    color: var(--clr-primary-100);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: var(--clr-neutral-200);
+    padding: 1.5rem;
+    border-radius: 15px;
+
+    box-shadow: -1px -1px 10px hsl(218, 24%, 13%);
+}
+
+.divider-image {
+    width: 80%;
+    margin-bottom: -25px;
+}
+
+.divider-image img {
+    width: 100%;
+}
+
+button {
+    background-color: var(--clr-primary-200);
+    padding: 1rem;
+    border-radius: 100%;
+    border: none;
+
+    position: relative;
+    top: 3rem;
+}
+
+#mobile {
+    display: none;
+}

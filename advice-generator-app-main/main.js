@@ -4,6 +4,8 @@ let adviceText;
 const adviceDisplayHeader = document.querySelector("#advice-head");
 const adviceDisplayText = document.querySelector("#advice-text");
 
+const adviceButton = document.querySelector("#advice-button");
+
 function getAdvice() {
     fetch("https://api.adviceslip.com/advice")
     .then(res => {
@@ -17,4 +19,7 @@ function getAdvice() {
         adviceDisplayText.textContent = `"${adviceText}"`
     })
 }
-getAdvice();
+
+window.onload = getAdvice()
+
+adviceButton.addEventListener("click", getAdvice)

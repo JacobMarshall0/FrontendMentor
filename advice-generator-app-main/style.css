@@ -21,10 +21,12 @@ h1 {
     color: var(--clr-primary-200);
     font-size: small;
     letter-spacing: .33ch;
+    text-transform: uppercase;
 }
 
 p {
     color: var(--clr-primary-100);
+    text-align: center;
 }
 
 .app {
@@ -32,6 +34,8 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    width: 500px;
 
     background-color: var(--clr-neutral-200);
     padding: 1.5rem;
@@ -57,6 +61,13 @@ button {
 
     position: relative;
     top: 3rem;
+
+    transition: all .8s ease-in-out;
+
+}
+
+button:hover {
+    transform:  rotate(405deg);
 }
 
 #mobile {

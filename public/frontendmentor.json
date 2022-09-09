@@ -47,6 +47,15 @@
             "directory": "tip-calculator-app-main",
             "challengeURL": "https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX",
             "WIP": false
+        },
+        {
+            "title": "Advice Generator App",
+            "difficulty": "Junior",
+            "difficultyLevel": 2,
+            "directory": "advice-generator-app-main",
+            "challengeURL": "https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db",
+            "WIP": false
         }
+        
     ]
 }

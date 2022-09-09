@@ -7,6 +7,10 @@
     --clr-neutral-300:hsl(218, 23%, 16%);
 
     --ff-main: 'Manrope', sans-serif;
+
+    --fs-500: 0.875rem;
+    --fs-750: 1.3125rem;
+    --fs-1000: 1.75rem;
 }
 
 body {
@@ -27,15 +31,17 @@ h1 {
 p {
     color: var(--clr-primary-100);
     text-align: center;
+    font-size: var(--fs-750);
 }
 
 .app {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 
-    width: 500px;
+    width: 450px;
 
     background-color: var(--clr-neutral-200);
     padding: 1.5rem;
@@ -46,7 +52,7 @@ p {
 
 .divider-image {
     width: 80%;
-    margin-bottom: -25px;
+    margin-bottom: 25px;
 }
 
 .divider-image img {
@@ -59,14 +65,14 @@ button {
     border-radius: 100%;
     border: none;
 
-    position: relative;
-    top: 3rem;
+    position: absolute;
+    bottom: -1.625rem;
 
     transition: all .8s ease-in-out;
 
 }
 
-button:hover {
+button:hover, button:focus {
     transform:  rotate(405deg);
 }
 
@@ -79,5 +85,12 @@ button:hover {
     .app {
         width: 250px;
         height: 320px;
+    }
+
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        display: block;
     }
 }

@@ -55,6 +55,14 @@
             "directory": "advice-generator-app-main",
             "challengeURL": "https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db",
             "WIP": false
+        },
+        {
+            "title": "Intro section with dropdown navigation",
+            "difficulty": "Junior",
+            "difficultyLevel": 2,
+            "directory": "intro-section-with-dropdown-navigation-main",
+            "challengeURL": "https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5",
+            "WIP": true
         }
     ]
 }

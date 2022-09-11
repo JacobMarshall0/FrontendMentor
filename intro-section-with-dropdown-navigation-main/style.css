@@ -1,7 +1,22 @@
+:root {
+    --ff-main: 'Epilogue', sans-serif;
+
+    --fs-500: 1.125rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.375rem;
+    --fs-800: 1.5rem;
+    --fs-900: 1.625rem;
+    --fs-1000: 1.75rem;
+    --fs-2000: 3.5rem;
+    --fs-2300: 4.125rem;
+    --fs-2400: 4.25rem;
+    --fs-2500: 4.375rem;
+}
 
 * {
     padding: 0;
     margin: 0;
+    font-family: var(--ff-main);
 }
 
 .desktop-nav {
@@ -28,11 +43,31 @@
     gap: 2rem;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: var(--fs-2300);
+    font-weight: 700;
+}
+
+p {
+    width: 90%;
+    line-height: 2.5ch;
+}
+
 button {
     padding: 1rem 2rem;
     border: none;
     background-color: transparent;
     border-radius: 15px;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .border {
@@ -43,12 +78,13 @@ button {
     background-color: black;
     color: white;
     border: 1px solid black;
+
+    font-size: var(--fs-500);
 }
 
 .inverted:hover {
     background-color: white;
     color: black;
-
 }
 
 .logo {
@@ -64,18 +100,32 @@ button {
 li {
     display: flex;
     align-items: center;
-    gap: 1ch;
     list-style-type: none;
 }
 
-.dropdown {
-    display: none;
+li > a {
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+    position: relative;
+}
+
+.dropdown{
+    position: relative;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgb(172, 172, 172);
+}
+
+.dropdown > li > a > img {
+    width: 16px; 
 }
 
 main {
     display: flex;
     justify-content: center;
-
+    align-items: center;
+    gap: 4rem;
     padding: 0rem 15rem;
 }
 
@@ -84,14 +134,24 @@ main > div {
 }
 
 .text{
-    width: 70%;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
 }
 
+.text > h1 {
+    margin-top: 7.5rem;
+}
 
+.image {
+    display: flex;
+    align-items: center;
+}
 
 .image > img {
-    height: 100%;
+    height: 80%;
 }
 
 .brands {
@@ -102,3 +162,6 @@ main > div {
 #mobile {
     display: none;
 }
+
+/* Utility */
+.hidden {display: none;}

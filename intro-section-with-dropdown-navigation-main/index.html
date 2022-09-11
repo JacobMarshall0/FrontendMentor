@@ -7,6 +7,9 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,10 +22,11 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="#">Features</a>
-                        <div class="dropdown-image-down"><img src="./resources/images/icon-arrow-down.svg" alt="dropdown down"></div>
-                        <div class="dropdown-image-up"><img src="./resources/images/icon-arrow-up.svg" alt="dropdown up"></div>
-                        <ul class="dropdown" id="Features">
+                        <a href="#">Features
+                            <div class="dropdown-image-down"><img src="./resources/images/icon-arrow-down.svg" alt="dropdown down"></div>
+                            <div class="dropdown-image-up hidden"><img src="./resources/images/icon-arrow-up.svg" alt="dropdown up"></div>
+                        </a>
+                        <ul class="dropdown " id="Features">
                             <li><a href="#"><img src="./resources/images/icon-todo.svg" alt="icon">Todo List</a></li>
                             <li><a href="#"><img src="./resources/images/icon-calendar.svg" alt="icon">Calendar</a></li>
                             <li><a href="#"><img src="./resources/images/icon-reminders.svg" alt="icon">Reminders</a></li>
@@ -30,9 +34,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Company</a>
-                        <div class="dropdown-image-down"><img src="./resources/images/icon-arrow-down.svg" alt="dropdown down"></div>
-                        <div class="dropdown-image-up"><img src="./resources/images/icon-arrow-up.svg" alt="dropdown up"></div>
+                        <a href="#">Company
+                            <div class="dropdown-image-down"><img src="./resources/images/icon-arrow-down.svg" alt="dropdown down"></div>
+                            <div class="dropdown-image-up hidden"><img src="./resources/images/icon-arrow-up.svg" alt="dropdown up"></div>
+                        </a>
                         <ul class="dropdown" id="Company">
                             <li><a href="#">History</a></li>
                             <li><a href="#">Our Team</a></li>
@@ -55,8 +60,9 @@
     </header>
     <main>
         <div class="text">
-            <h1>Make remote work</h1>
-            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar</p>
+            <h1>Make <br> remote work</h1>
+            <p>Get your team in sync, no matter your location. 
+                <br>Streamline processes, create team rituals, and watch productivity soar.</p>
             <button class="inverted">Learn more</button>
 
             <ul class="brands">

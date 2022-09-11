@@ -7,12 +7,48 @@
 .desktop-nav {
     display: flex;
     justify-content: space-between;
+    padding: 2rem;
+}
+
+.mobile-nav {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-left {
     display: flex;
     justify-content: space-between;
     align-content: center;
+    gap: 2rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.inverted {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.inverted:hover {
+    background-color: white;
+    color: black;
+
 }
 
 .logo {
@@ -38,9 +74,31 @@ li {
 
 main {
     display: flex;
+    justify-content: center;
+
+    padding: 0rem 15rem;
+}
+
+main > div {
+    height: 800px;
+}
+
+.text{
+    width: 70%;
+    
+}
+
+
+
+.image > img {
+    height: 100%;
 }
 
 .brands {
     display: flex;
     gap: 2rem;
+}
+
+#mobile {
+    display: none;
 }

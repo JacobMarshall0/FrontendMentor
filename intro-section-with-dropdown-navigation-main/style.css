@@ -109,11 +109,17 @@ li > a {
     display: flex;
     align-items: center;
     gap: 1ch;
+    transition: all 0.15s ease;
+}
+
+li > a:hover {
+    transform: scale(1.05);
+
 }
 
 .dropdown{
     position: absolute;
-
+    line-height: 24px;
     top: 40px;
     left: 0px;
     padding: 1rem;
@@ -168,4 +174,4 @@ main > div {
 }
 
 /* Utility */
-.hidden {display: none;}
+.hidden { display: none; }

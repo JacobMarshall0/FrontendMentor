@@ -268,6 +268,7 @@ main > div {
     .right {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         width: 60%;
         padding: 1rem 1rem;
 
@@ -277,7 +278,7 @@ main > div {
         background-color: white;
     }
     
-    .right > header {
+    .right > div > header {
         display: flex;
         justify-content: flex-end;
     }
@@ -285,18 +286,6 @@ main > div {
     .right > header > img {
         width: 32px;
         height: 32px;
-    }
-    
-    .right > .vertical-navbar > ul {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    /* Won't space-around ????? */
-    .vertical-navbar {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
     }
 
     .buttons {
@@ -308,6 +297,20 @@ main > div {
         font-size: var(--fs-500);
     }
 
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown {
+        position: static;
+        padding: 0 1rem;
+        line-height: 36px;
+        padding: 1rem;
+        box-shadow: none;
+
+    }
 }
 
 

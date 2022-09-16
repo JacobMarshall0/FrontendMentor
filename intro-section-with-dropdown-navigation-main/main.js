@@ -1,7 +1,10 @@
-const dropdownParents = document.querySelectorAll("#parent")
-const dropdowns = document.querySelectorAll(".dropdown")
+const dropdownParents = document.querySelectorAll("#parent");
+const dropdowns = document.querySelectorAll(".dropdown");
 const desktopNavbar = document.querySelector(".desktop-nav");
 
+const menuButtonOpen = document.querySelector("#menu-button");
+const menuButtonClose = document.querySelector("#menu-button-close");
+const mobileMenu = document.querySelector(".mobile-menu");
 
 // Showing the dropdown
 dropdownParents.forEach(function(element){
@@ -24,6 +27,16 @@ desktopNavbar.addEventListener("mouseout", () => {
         element.classList.add("hidden")
     })
 })
+
+menuButtonOpen.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+})
+
+menuButtonClose.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+})
+
+
 
 /* 
 value = 1

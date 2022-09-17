@@ -13,6 +13,12 @@ dropdownParents.forEach(function(element){
         dropdown = dropdowns[Array.prototype.indexOf.call(dropdownParents, element)]
         dropdown.classList.remove("hidden")
     })
+
+    element.addEventListener("touchstart", ()=> {
+        dropdown = dropdowns[Array.prototype.indexOf.call(dropdownParents, element)]
+        dropdown.classList.toggle("hidden")
+
+    })
 })
 
 // Removing the dropdown on mouseout
@@ -35,32 +41,3 @@ menuButtonOpen.addEventListener("click", () => {
 menuButtonClose.addEventListener("click", () => {
     mobileMenu.classList.add("hidden");
 })
-
-
-
-/* 
-value = 1
-        setInterval(function (){
-            if (value > 0){
-                value -= .05
-                element.setAttribute("style", `opacity: ${value}`)
-                console.log(value)
-            }
-        }, 100)
-*/
-
-/* 
-function fadeOut(element) {
-    intervalID = setInterval(() => {
-        let opacity = Number(window.getComputedStyle(element).getPropertyValue("opacity"))
-
-        if (opacity > 0) {
-            opacity -= 0.1
-            element.style.opacity = opacity
-        }
-        else {
-            clearInterval(intervalID)
-        }
-    }, 20);
-}
-*/

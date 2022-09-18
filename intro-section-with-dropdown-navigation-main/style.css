@@ -307,7 +307,7 @@ main > div {
         position: static;
         padding: 0 1rem;
         line-height: 36px;
-        padding: 1rem;
+        padding: 0 1rem;
         box-shadow: none;
     }
 }

@@ -8,23 +8,28 @@ const mobileMenu = document.querySelector(".mobile-menu");
 
 // Showing the dropdown
 dropdownParents.forEach(function(element){
-    element.addEventListener("mouseover", () => {
-        // Goofy method of getting index, hashmap of dropdownParent : dropdown would work better
-        dropdown = dropdowns[Array.prototype.indexOf.call(dropdownParents, element)]
-        dropdown.classList.remove("hidden")
-    })
-
-    element.addEventListener("touchstart", ()=> {
-        dropdown = dropdowns[Array.prototype.indexOf.call(dropdownParents, element)]
-        dropdown.classList.toggle("hidden")
-
-    })
+    if (!element.classList.contains("mobile")){
+        element.addEventListener("mouseover", () => {
+            // Goofy method of getting index, hashmap of dropdownParent : dropdown would work better
+            dropdown = dropdowns[Array.prototype.indexOf.call(dropdownParents, element)]
+            dropdown.classList.remove("hidden")
+        })
+    } else {
+        element.addEventListener("touchstart", ()=> {
+            dropdown = dropdowns[Array.prototype.indexOf.call(dropdownParents, element)]
+            dropdown.classList.toggle("hidden")
+    
+        })
+    }    
 })
 
 // Removing the dropdown on mouseout
 dropdowns.forEach(function(element){
-    element.addEventListener("mouseout", ()=> {     
-        element.classList.add("hidden")
+    element.addEventListener("mouseout", ()=> {    
+        if (!element.classList.contains("mobile")){
+            element.classList.add("hidden")
+            console.log("BRUH")
+        } 
     })
 })
 
@@ -41,3 +46,6 @@ menuButtonOpen.addEventListener("click", () => {
 menuButtonClose.addEventListener("click", () => {
     mobileMenu.classList.add("hidden");
 })
+
+//TODO: Separate mobile menu dropdowns into separate handling ?
+

@@ -1,0 +1,95 @@
+:root {
+    --clr-primary-red: hsl(1, 90%, 64%);
+    --clr-primary-blue: hsl(219, 85%, 26%);
+
+    --clr-neutral-100:hsl(0, 0%, 100%);
+    --clr-neutral-200:hsl(210, 60%, 98%); /* Background ? */
+    --clr-neutral-300:hsl(211, 68%, 94%); 
+    --clr-neutral-400:hsl(205, 33%, 90%); /* Unread background? */
+    --clr-neutral-500:hsl(219, 14%, 63%); /* Notification text */
+    --clr-neutral-600:hsl(219, 12%, 42%); /* Post Names */
+    --clr-neutral-700:hsl(224, 21%, 14%); /* Names */
+
+    --fs-500: 1rem;
+
+    --ff-main: 'Plus Jakarta Sans', sans-serif;
+
+    --fw-medium: 500;
+    --fw-bold: 800;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--ff-main);
+}
+
+body {
+    background-color: var(--clr-neutral-200);
+}
+
+.notifications-window {
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+
+header > h1 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#notifications-count {
+    background-color: var(--clr-primary-blue);
+    color: var(--clr-neutral-200);
+    border-radius: 7px;
+    padding: .25rem .75rem;
+    font-size: 1rem;
+}
+
+button {
+    background-color: transparent;
+    color: var(--clr-neutral-600);
+    border: none;
+
+}
+
+.unread-icon {
+    width: 8px;
+    display: inline-block;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--clr-primary-red);
+}
+
+.unread {
+    background-color: var(--clr-neutral-400);
+}
+
+.notification-card {
+    color: var(--clr-neutral-500);
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+    border-radius: 15px;
+}
+
+.name {
+    color: var(--clr-neutral-700);
+}
+
+.group {
+    color: var(--clr-primary-blue);
+}
+
+.post {
+    color: var(--clr-neutral-600);
+}

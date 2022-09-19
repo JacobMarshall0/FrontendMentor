@@ -63,6 +63,14 @@
             "directory": "intro-section-with-dropdown-navigation-main",
             "challengeURL": "https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5",
             "WIP": false
+        },
+        {
+            "title": "Notifications Page",
+            "difficulty": "Junior",
+            "difficultyLevel": 2,
+            "directory": "notifications-page-main",
+            "challengeURL": "https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC/hub/notifications-page-OPLxiXReju",
+            "WIP": true
         }
     ]
 }

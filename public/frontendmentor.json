@@ -71,6 +71,15 @@
             "directory": "notifications-page-main",
             "challengeURL": "https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC/hub/notifications-page-OPLxiXReju",
             "WIP": false
+        },
+        {
+            "title": "NFT Preview Card",
+            "difficulty": "Newbie",
+            "difficultyLevel": 1,
+            "directory": "nft-preview-card-component-main",
+            "challengeURL": "https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U",
+            "WIP": true
         }
     ]
 }
+
